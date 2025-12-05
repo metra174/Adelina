@@ -3,27 +3,27 @@ import { GalleryItem } from '../types';
 
 const images: GalleryItem[] = [
   { 
-    src: 'https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=800', 
+    src: 'https://i.imgur.com/tuxHtHN.jpeg', 
     caption: 'Detalhes em pedraria feitos à mão.' 
   },
   { 
-    src: 'https://images.unsplash.com/photo-1560706834-8c8872558661?q=80&w=800', 
+    src: 'https://i.imgur.com/HWlWuvj.jpeg0', 
     caption: 'Corte sereia com cauda estruturada.' 
   },
   { 
-    src: 'https://images.unsplash.com/photo-1550614000-4b9519e02d48?q=80&w=800', 
+    src: 'https://i.imgur.com/LQkwGVM.jpeg', 
     caption: 'Acabamento premium em renda francesa.' 
   },
   { 
-    src: 'https://images.unsplash.com/photo-1549416878-b9ca95e9f6f5?q=80&w=800', 
+    src: 'https://i.imgur.com/U4KDcDa.jpeg', 
     caption: 'Sofisticação que molda a silhueta.' 
   },
   { 
-    src: 'https://images.unsplash.com/photo-1585252195028-10b64d142109?q=80&w=800', 
+    src: 'https://i.imgur.com/HWlWuvj.jpeg', 
     caption: 'Vestido de gala com brilho discreto e elegante.' 
   },
   { 
-    src: 'https://images.unsplash.com/photo-1596451190630-186aff535bf2?q=80&w=800', 
+    src: 'https://i.imgur.com/tuxHtHN.jpeg', 
     caption: 'Luxo em cada camada do tecido.' 
   }
 ];

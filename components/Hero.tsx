@@ -5,14 +5,21 @@ export const Hero: React.FC = () => {
   const whatsappLink = "https://wa.me/244923797350";
 
   return (
-    <section id="home" className="relative h-screen w-full overflow-hidden flex items-center justify-center">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1546193430-c2d207739ed7?q=80&w=2500&auto=format&fit=crop")',
-        }}
-      >
+    <section id="home" className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-deepBlack">
+      {/* Background Video */}
+      <div className="absolute inset-0 w-full h-full bg-deepBlack">
+        <video 
+          className="w-full h-full object-cover opacity-90"
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          poster="https://images.unsplash.com/photo-1546193430-c2d207739ed7?q=80&w=2500&auto=format&fit=crop"
+        >
+          {/* Using a high-quality stock video of a bride/fashion model */}
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-bride-posing-in-a-beautiful-wedding-dress-4604-large.mp4" type="video/mp4" />
+        </video>
+        {/* Overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-t from-deepBlack/90 via-deepBlack/50 to-deepBlack/30"></div>
       </div>
 

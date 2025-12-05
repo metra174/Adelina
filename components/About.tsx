@@ -9,14 +9,21 @@ export const About: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           
-          {/* Image Side */}
+          {/* Video Side - "Making Of" feeling */}
           <div className="w-full lg:w-1/2 relative">
-            <div className="relative z-10">
-              <img 
-                src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?q=80&w=1200&auto=format&fit=crop" 
-                alt="Adelina do Rosário trabalhando" 
-                className="w-full h-[600px] object-cover rounded-sm shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
-              />
+            <div className="relative z-10 group">
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700 z-20 pointer-events-none"></div>
+              <video 
+                className="w-full h-[600px] object-cover rounded-sm shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700"
+                autoPlay 
+                muted 
+                loop 
+                playsInline
+                poster="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?q=80&w=1200"
+              >
+                {/* Stock video of sewing/tailoring details */}
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-tailor-working-with-a-needle-and-thread-41968-large.mp4" type="video/mp4" />
+              </video>
             </div>
             {/* Outline Decorative Box */}
             <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-gold-500/30 -z-0 hidden md:block"></div>
