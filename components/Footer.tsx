@@ -2,7 +2,11 @@ import React from 'react';
 import { Button } from './Button';
 import { Instagram, MapPin, Phone } from 'lucide-react';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onOpenBooking: () => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
   const whatsappLink = "https://wa.me/244923797350";
 
   return (
@@ -14,8 +18,8 @@ export const Footer: React.FC = () => {
           O seu vestido perfeito está a um clique de distância. Reserve a sua consultoria exclusiva 
           com a estilista Adelina do Rosário e dê o primeiro passo para viver o seu momento com elegância.
         </p>
-        <Button variant="primary" icon onClick={() => window.open(whatsappLink, '_blank')} className="py-4 px-12 text-lg shadow-xl hover:shadow-gold-500/20">
-          Contactar via WhatsApp
+        <Button variant="primary" icon onClick={onOpenBooking} className="py-4 px-12 text-lg shadow-xl hover:shadow-gold-500/20">
+          Agendar Consultoria
         </Button>
       </div>
 

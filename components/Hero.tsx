@@ -1,9 +1,11 @@
 import React from 'react';
 import { Button } from './Button';
 
-export const Hero: React.FC = () => {
-  const whatsappLink = "https://wa.me/244923797350";
+interface HeroProps {
+  onOpenBooking: () => void;
+}
 
+export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
   return (
     <section id="home" className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-deepBlack">
       {/* Background Video */}
@@ -38,8 +40,8 @@ export const Hero: React.FC = () => {
         </p>
         
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center group">
-          <Button icon onClick={() => window.open(whatsappLink, '_blank')} className="px-10 py-4 text-base">
-            Agendar Consultoria no WhatsApp
+          <Button icon onClick={onOpenBooking} className="px-10 py-4 text-base">
+            Agendar Consultoria
           </Button>
         </div>
 

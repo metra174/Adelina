@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -6,23 +6,30 @@ import { Services } from './components/Services';
 import { Gallery } from './components/Gallery';
 import { Testimonials } from './components/Testimonials';
 import { Footer } from './components/Footer';
+import { BookingModal } from './components/BookingModal';
 
 function App() {
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
   const whatsappLink = "https://wa.me/244923797350";
+
+  const handleOpenBooking = () => setIsBookingOpen(true);
+  const handleCloseBooking = () => setIsBookingOpen(false);
 
   return (
     <div className="min-h-screen flex flex-col font-sans">
-      <Header />
+      <Header onOpenBooking={handleOpenBooking} />
       <main className="flex-grow">
-        <Hero />
+        <Hero onOpenBooking={handleOpenBooking} />
         <About />
         <Services />
         <Gallery />
         <Testimonials />
       </main>
-      <Footer />
+      <Footer onOpenBooking={handleOpenBooking} />
       
-      {/* Floating WhatsApp Button */}
+      <BookingModal isOpen={isBookingOpen} onClose={handleCloseBooking} />
+      
+      {/* Floating WhatsApp Button - Keeps direct link for quick chat */}
       <a 
         href={whatsappLink}
         target="_blank" 

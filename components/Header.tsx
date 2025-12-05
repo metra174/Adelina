@@ -9,7 +9,11 @@ const navItems: NavItem[] = [
   { label: 'Contacto', href: '#contact' },
 ];
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  onOpenBooking: () => void;
+}
+
+export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -20,8 +24,6 @@ export const Header: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const whatsappLink = "https://wa.me/244923797350";
 
   return (
     <header 
@@ -50,14 +52,12 @@ export const Header: React.FC = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-500 transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
-          <a 
-            href={whatsappLink}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button 
+            onClick={onOpenBooking}
             className="border border-gold-500 text-gold-500 px-4 py-2 text-xs uppercase tracking-widest hover:bg-gold-500 hover:text-white transition-all duration-300 shadow-[0_0_10px_rgba(212,175,55,0.2)] hover:shadow-[0_0_20px_rgba(212,175,55,0.6)]"
           >
             Agendar Consultoria
-          </a>
+          </button>
         </nav>
 
         {/* Mobile Toggle */}
@@ -86,13 +86,15 @@ export const Header: React.FC = () => {
           </a>
         ))}
         <div className="flex flex-col gap-6 mt-8 items-center">
-           <a 
-            href={whatsappLink}
+           <button 
+            onClick={() => {
+              setIsMobileMenuOpen(false);
+              onOpenBooking();
+            }}
             className="border border-gold-500 text-gold-500 px-6 py-3 uppercase tracking-widest"
-            onClick={() => setIsMobileMenuOpen(false)}
           >
             Agendar Consultoria
-          </a>
+          </button>
           <a href="https://instagram.com/byadelinadorosario" className="text-white hover:text-gold-500 transition-colors"><Instagram size={24} /></a>
         </div>
         <button 
