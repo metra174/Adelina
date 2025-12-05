@@ -19,7 +19,7 @@ export const About: React.FC = () => {
                 muted 
                 loop 
                 playsInline
-                poster="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?q=80&w=1200"
+                poster="https://i.imgur.com/ta9CZLC.jpeg"
               >
                 {/* Stock video of sewing/tailoring details */}
                 <source src="https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-tailor-working-with-a-needle-and-thread-41968-large.mp4" type="video/mp4" />

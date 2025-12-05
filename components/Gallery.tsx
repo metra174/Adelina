@@ -25,6 +25,18 @@ const images: GalleryItem[] = [
   { 
     src: 'https://i.imgur.com/tuxHtHN.jpeg', 
     caption: 'Luxo em cada camada do tecido.' 
+  },
+  { 
+    src: 'https://i.imgur.com/SvkzYWT.jpeg', 
+    caption: 'Design exclusivo com acabamento impecável.' 
+  },
+  { 
+    src: 'https://i.imgur.com/b7nTqC8.jpeg', 
+    caption: 'A leveza e o movimento da alta costura.' 
+  },
+  { 
+    src: 'https://i.imgur.com/3pxRIwo.jpeg', 
+    caption: 'Elegância atemporal para momentos únicos.' 
   }
 ];
 
